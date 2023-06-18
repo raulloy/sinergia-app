@@ -47,15 +47,15 @@ export default function ResultsScreen() {
 
   // Properties with index 4, 6, and 12
   const propertiesSet1 = [
-    response['teamSacrifice'],
-    response['teamMeetings'],
-    response['teamContributions'],
+    response['teamApologies'],
+    response['teamConfessions'],
+    response['teamPersonalLife'],
   ];
 
   // Properties with index 1, 7, and 10
   const propertiesSet2 = [
-    response['feedbackFrequency'],
-    response['teamApologies'],
+    response['discussionFrequency'],
+    response['teamMeetings'],
     response['teamDifficultIssues'],
   ];
 
@@ -124,12 +124,16 @@ export default function ResultsScreen() {
   };
 
   const radarOptions = {
-    scale: {
-      ticks: {
-        beginAtZero: true,
-        min: 0,
-        max: 15, // Adjust the max value as desired
-        stepSize: 5,
+    scales: {
+      r: {
+        angleLines: {
+          display: true,
+        },
+        suggestedMin: 0,
+        suggestedMax: 15,
+        ticks: {
+          stepSize: 5,
+        },
       },
     },
   };
@@ -160,25 +164,6 @@ export default function ResultsScreen() {
               los mejores son presa de las disfunciones
             </Card.Body>
           </Card>
-
-          {/* <Card className="mb-3">
-            <Card.Body>
-              <Card.Title>Resultados</Card.Title>
-              <Card.Text>
-                <strong>Ausencia de confianza:</strong>{' '}
-                {calculateSum(propertiesSet1, parameterMapping)} <br />
-                <strong>Temor al conflicto:</strong>{' '}
-                {calculateSum(propertiesSet2, parameterMapping)} <br />
-                <strong>Falta de compromiso:</strong>{' '}
-                {calculateSum(propertiesSet3, parameterMapping)} <br />
-                <strong>Evitar responsabilidades:</strong>{' '}
-                {calculateSum(propertiesSet4, parameterMapping)} <br />
-                <strong>Falta de enfoque a resultados: </strong>{' '}
-                {calculateSum(propertiesSet5, parameterMapping)}
-              </Card.Text>
-              <Link to="/diagnostic-form">Editar</Link>
-            </Card.Body>
-          </Card> */}
 
           <Card className="mb-3">
             <Card.Body>
