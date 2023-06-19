@@ -17,12 +17,12 @@ const data = {
   ],
   diagnoses: [
     {
-      name: 'Equipo de trabajo. 15 disfunciones',
-      slug: 'equipo-trabajo-15-disfunciones',
+      name: 'Equipo de trabajo. 15 enfermedades',
+      slug: 'equipo-trabajo-15-enfermedades',
       category: 'Equipos',
       image: '/images/teamwork.jpg',
       availability: 1,
-      duration: '3 min',
+      duration: '10 min',
       shortDescription:
         'Identificar cómo estás en cuanto a algunos temas sobre el Trabajo en Equipo, que te ayudarán a tener claridad en que punto estás.',
       description:

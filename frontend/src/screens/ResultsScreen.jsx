@@ -207,41 +207,136 @@ export default function ResultsScreen() {
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
-                    <Col md={10}>Ausencia de confianza:</Col>
-                    <Col md={2}>
-                      {calculateSum(propertiesSet1, parameterMapping)}
+                    <Col
+                      md={9}
+                      style={{
+                        color:
+                          calculateSum(propertiesSet1, parameterMapping) >= 13
+                            ? 'green'
+                            : calculateSum(propertiesSet1, parameterMapping) >=
+                              9
+                            ? 'orange'
+                            : calculateSum(propertiesSet1, parameterMapping) < 9
+                            ? 'red'
+                            : '',
+                      }}
+                    >
+                      Ausencia de confianza:
+                    </Col>
+                    <Col md={3}>
+                      {(
+                        (calculateSum(propertiesSet1, parameterMapping) / 15) *
+                        100
+                      ).toFixed(0)}
+                      %
                     </Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
-                    <Col md={10}>Temor al conflicto:</Col>
-                    <Col md={2}>
-                      {calculateSum(propertiesSet2, parameterMapping)}
+                    <Col
+                      md={9}
+                      style={{
+                        color:
+                          calculateSum(propertiesSet2, parameterMapping) >= 13
+                            ? 'green'
+                            : calculateSum(propertiesSet2, parameterMapping) >=
+                              9
+                            ? 'orange'
+                            : calculateSum(propertiesSet2, parameterMapping) < 9
+                            ? 'red'
+                            : '',
+                      }}
+                    >
+                      Temor al conflicto:
+                    </Col>
+                    <Col md={3}>
+                      {(
+                        (calculateSum(propertiesSet2, parameterMapping) / 15) *
+                        100
+                      ).toFixed(0)}
+                      %
                     </Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
-                    <Col md={10}>Falta de compromiso:</Col>
-                    <Col md={2}>
-                      {calculateSum(propertiesSet3, parameterMapping)}
+                    <Col
+                      md={9}
+                      style={{
+                        color:
+                          calculateSum(propertiesSet3, parameterMapping) >= 13
+                            ? 'green'
+                            : calculateSum(propertiesSet3, parameterMapping) >=
+                              9
+                            ? 'orange'
+                            : calculateSum(propertiesSet3, parameterMapping) < 9
+                            ? 'red'
+                            : '',
+                      }}
+                    >
+                      Falta de compromiso:
+                    </Col>
+                    <Col md={3}>
+                      {(
+                        (calculateSum(propertiesSet3, parameterMapping) / 15) *
+                        100
+                      ).toFixed(0)}
+                      %
                     </Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
-                    <Col md={10}>Evitar responsabilidades:</Col>
-                    <Col md={2}>
-                      {calculateSum(propertiesSet4, parameterMapping)}
+                    <Col
+                      md={9}
+                      style={{
+                        color:
+                          calculateSum(propertiesSet4, parameterMapping) >= 13
+                            ? 'green'
+                            : calculateSum(propertiesSet4, parameterMapping) >=
+                              9
+                            ? 'orange'
+                            : calculateSum(propertiesSet4, parameterMapping) < 9
+                            ? 'red'
+                            : '',
+                      }}
+                    >
+                      Evitar responsabilidades:
+                    </Col>
+                    <Col md={3}>
+                      {(
+                        (calculateSum(propertiesSet4, parameterMapping) / 15) *
+                        100
+                      ).toFixed(0)}
+                      %
                     </Col>
                   </Row>
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <Row>
-                    <Col md={10}>Falta de enfoque a resultados:</Col>
-                    <Col md={2}>
-                      {calculateSum(propertiesSet5, parameterMapping)}
+                    <Col
+                      md={9}
+                      style={{
+                        color:
+                          calculateSum(propertiesSet5, parameterMapping) >= 13
+                            ? 'green'
+                            : calculateSum(propertiesSet5, parameterMapping) >=
+                              9
+                            ? 'orange'
+                            : calculateSum(propertiesSet5, parameterMapping) < 9
+                            ? 'red'
+                            : '',
+                      }}
+                    >
+                      Falta de enfoque a resultados:
+                    </Col>
+                    <Col md={3}>
+                      {(
+                        (calculateSum(propertiesSet5, parameterMapping) / 15) *
+                        100
+                      ).toFixed(0)}
+                      %
                     </Col>
                   </Row>
                 </ListGroup.Item>

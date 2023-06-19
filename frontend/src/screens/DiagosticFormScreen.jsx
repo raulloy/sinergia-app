@@ -113,7 +113,7 @@ export default function DiagosticFormScreen() {
   return (
     <div>
       <Helmet>
-        <title>Shipping Address</title>
+        <title>Diagnostic Form</title>
       </Helmet>
 
       <CheckoutSteps step1 step2></CheckoutSteps>
