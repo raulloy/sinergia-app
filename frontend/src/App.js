@@ -16,6 +16,7 @@ import SigninScreen from './screens/SigninScreen';
 import DiagosticFormScreen from './screens/DiagosticFormScreen';
 import SignupScreen from './screens/SignupScreen';
 import ResultsScreen from './screens/ResultsScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -25,6 +26,7 @@ function App() {
     ctxDispatch({ type: 'USER_SIGNOUT' });
     localStorage.removeItem('userInfo');
     localStorage.removeItem('shippingAddress');
+    window.location.href = '/signin';
   };
 
   return (
@@ -80,6 +82,7 @@ function App() {
               <Route path="/instructions" element={<InstructionsScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
               <Route path="/signup" element={<SignupScreen />} />
+              <Route path="/profile" element={<ProfileScreen />} />
               <Route path="/results" element={<ResultsScreen />} />
               <Route
                 path="/diagnostic-form"

@@ -17,6 +17,7 @@ export default function SignupScreen() {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [company, setCompany] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
@@ -32,6 +33,7 @@ export default function SignupScreen() {
       const { data } = await Axios.post('/api/users/signup', {
         name,
         email,
+        company,
         password,
       });
       ctxDispatch({ type: 'USER_SIGNIN', payload: data });
@@ -47,6 +49,12 @@ export default function SignupScreen() {
       navigate(redirect);
     }
   }, [navigate, redirect, userInfo]);
+
+  const companies = [
+    { company: 'Coca-Cola S.A. de C.V.' },
+    { company: 'Sabritas S.A. de C.V.' },
+    { company: 'Cinemex S.A. de C.V.' },
+  ];
 
   return (
     <Container className="small-container">
@@ -68,6 +76,24 @@ export default function SignupScreen() {
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Group>
+
+        <Form.Group className="mb-3" controlId="company">
+          <Form.Label>Empresa</Form.Label>
+          <Form.Control
+            as="select"
+            value={company}
+            onChange={(e) => setCompany(e.target.value)}
+            required
+          >
+            <option value="">Seleccionar empresa</option>
+            {companies.map((item, index) => (
+              <option key={index} value={item.company}>
+                {item.company}
+              </option>
+            ))}
+          </Form.Control>
+        </Form.Group>
+
         <Form.Group className="mb-3" controlId="password">
           <Form.Label>Contraseña</Form.Label>
           <Form.Control
